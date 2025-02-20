@@ -39,7 +39,7 @@ class LoginSreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        vGap(30),
+                        vGap(80),
                         Align(
                           alignment: Alignment.topLeft,
                           child: IconButton(
@@ -47,19 +47,21 @@ class LoginSreen extends StatelessWidget {
                                 Get.back();
                               },
                               icon: Icon(
-                                Icons.arrow_back,
+                                Icons.arrow_circle_left,
                                 color: cWhiteColor,
+                                size: 30,
                               )),
                         ),
-                        vGap(70),
+                        vGap(30),
                         Text(
                           CStrings.welcomeBack,
                           style: TextStyle(
                             fontSize: 30,
+                            fontWeight: FontWeight.w800,
                             color: cWhiteColor,
                           ),
                         ),
-                        vGap(50),
+                        vGap(120),
                         Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: CTextFormField(
@@ -86,7 +88,7 @@ class LoginSreen extends StatelessWidget {
                             onTap: () {
                               Get.toNamed(AppRoutes.Forgotpasswordscreen);
                             },
-                            child: Text('Forgot Password ?', style: TextStyle(color: cWhiteColor),),
+                            child: Text('Forgot Password ?', style: TextStyle(color: cWhiteColor, fontWeight: FontWeight.w600),),
                           )
                         ),
                         SizedBox(
@@ -96,8 +98,9 @@ class LoginSreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: CButton(
                               borderRadius: 10,
-                              width: getWidth(context),
+                              width: getWidth(context)/3,
                               height: getHeight(context) / 15,
+                              color: Colors.blue[900],
                               onPressed: () async {
                                 if (formkey.currentState!.validate()) {
                                   FocusScope.of(context).unfocus();
@@ -125,7 +128,7 @@ class LoginSreen extends StatelessWidget {
                                   }
                                 }
                               },
-                              text: Text('Login')),
+                              text: Text('Login', style: TextStyle(color: Colors.white),)),
                         ),
                         SizedBox(
                           height: 15,
@@ -142,7 +145,7 @@ class LoginSreen extends StatelessWidget {
                           children: [
                             Text(
                               CStrings.DonthaveanAccount,
-                              style: TextStyle(color: cWhiteColor),
+                              style: TextStyle(color: cBlackColor, fontWeight: FontWeight.w600),
                             ),
                             hGap(10),
                             InkWell(
@@ -151,7 +154,7 @@ class LoginSreen extends StatelessWidget {
                               },
                               child: Text(
                                 'Register Now',
-                                style: TextStyle(color: cWhiteColor),
+                                style: TextStyle(color: cBlackColor, fontWeight: FontWeight.w600),
                               ),
                             )
                           ],

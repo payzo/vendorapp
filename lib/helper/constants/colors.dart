@@ -23,12 +23,12 @@ const Color cGrayColor = Color(0xff808080);
 const Color cprofileGradientColor = Color(0xff5165b3);
 const Color cprofileGradientColor2 = Color(0xff7D529D);
 const Color cNewPrimaryColor = Color(0xff004AAD);
-
+const Color buttonColornew = Color(0xff2e5093);
 
 //my-colors
 const Color commonButtonColor = Color(0xffFFFFFF);
-const PrimaryBgColor = Color(0xff5463b2);
-const SecondaryBgColor = Color(0xff7c539e);
+const PrimaryBgColor = Color(0xff00246b);
+const SecondaryBgColor = Color(0xffa2bbe6);
 
 
 

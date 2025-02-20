@@ -1,15 +1,15 @@
 class CStrings {
   CStrings._();
 
-static String welcomeBack = "Welcome Back!\n Glad to See you again";
+static String welcomeBack = "Welcome Back!\nGlad to See you, Again !";
 static String ForgotPassword = "Forgot Password ?";
 static String DonthaveanAccount = "Dont have an Account ?";
 static String Register = "Register now";
-static String RegistrationTilte = "Hello Vendor ! \n Register here, to get, started!";
+static String RegistrationTilte = "Hello Vendor ! \nRegister here, to get, started!";
 static String fullName = "Please Enter FullName";
 static String newPassword = "Please Enter New Password";
 static String confirmPassword = "Please Confirm New Password";
-static String ohnoForgot = "Oh no! \n Forgot your password";
+static String ohnoForgot = "Oh no! \nForgot your password";
 static String pleaseEnterMobileNum = "Please Enter Mobile Number";
 static String updatePassword = "Update Password";
 static String continuewithLogin = "Continue with Login !";

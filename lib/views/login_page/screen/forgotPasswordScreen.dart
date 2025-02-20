@@ -42,7 +42,7 @@ Widget build(BuildContext context){
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               vGap(70),
+               vGap(80),
                    
 
                    Align(
@@ -51,14 +51,22 @@ Widget build(BuildContext context){
                     Get.back();
                 }, icon: Icon(
                   color: cWhiteColor,
-                  Icons.arrow_back
+                  Icons.arrow_circle_left,
+                  size: 30,
                 )),
                    ),
-                vGap(30),
+                vGap(10),
 
 
-
-                Text(CStrings.ohnoForgot, style: TextStyle(color: cWhiteColor, fontSize: 25),),
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Align(
+                    alignment: Alignment.centerLeft,
+                    child:          Text(CStrings.ohnoForgot, style: TextStyle(color: cWhiteColor, fontSize: 30),),
+                   ),
+                 ),
+                 vGap(80),
+       
 
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -72,7 +80,7 @@ Widget build(BuildContext context){
                      
                     suffixIcon:
                      CButton(
-                      color: Colors.purple,
+                      color: buttonColornew,
                       borderRadius: 2,
                       onPressed: () async{
                        if(formkey.currentState!.validate()) {
@@ -100,7 +108,7 @@ Widget build(BuildContext context){
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CTextFormField(
-                    hintText: CStrings.pleaseEnterMobileNum,
+                    hintText: "Please Enter OTP",
                     keyboardType: TextInputType.number,
                      inputFormatters: [
                                 LengthLimitingTextInputFormatter(6),
@@ -108,8 +116,8 @@ Widget build(BuildContext context){
                     controller: controller.OTPController,
                     suffixIcon:
                      CButton(
-                      color:Colors.purple,
-                      borderRadius: 2,
+                      color:buttonColornew,
+                      borderRadius: 3,
                       onPressed: () async{
                         if(formkey.currentState!.validate()){
                           FocusScope.of(context).unfocus();
@@ -150,25 +158,19 @@ Widget build(BuildContext context){
                  ),
                  
                ):Container(),
+               vGap(20),
 
 
                Padding(
                  padding: const EdgeInsets.all(8.0),
                  child: CButton(
+                   
                   onPressed: ()async {
                    if(formkey.currentState!.validate()){
                     FocusScope.of(context).unfocus();
                     formkey.currentState!.save();
 
-                    // if(controller.PhoneNumberController.text.isEmpty){
-                    //   showToustMessage2(message: "Please Enter Mobile MNumber");
-                    // } else if(controller.OTPController.text.isEmpty){
-                    //   showToustMessage2(message: "Please Enter OTP");
-                    // }else if(controller.passwordController.text.isEmpty){
-                    //   showToustMessage2(message: "Please Enter Password");
-                    // }else if(controller.ConfirmPasswordController.text.isEmpty){
-                    //   showToustMessage2(message: "Please Enter Confirm Password");
-                    // }else {
+       
                       ForgotPasswordBody body = ForgotPasswordBody(
                         vendorId: vendorId,
                         nPassword: controller.passwordController.text,
@@ -180,16 +182,17 @@ Widget build(BuildContext context){
                     }
                   
                   },
-                  color: cWhiteColor,
+                  color: buttonColornew,
                   width: getWidth(context)/2,
                    height: getHeight(context) / 15,
-                  text: Text(CStrings.updatePassword)),
+                  text: Text(CStrings.updatePassword, style: TextStyle(color: cWhiteColor, fontWeight: FontWeight.w600),)),
                ),
 
 
                Text('(or)', style: TextStyle(color: cWhiteColor, fontSize: 16),),
+               vGap(10),
 
-               Text(CStrings.continuewithLogin, style: TextStyle(color: cWhiteColor, fontSize: 16),)
+               Text(CStrings.continuewithLogin, style: TextStyle(color: cBlackColor, fontSize: 16, fontWeight: FontWeight.w500),)
              
               ],
              ),

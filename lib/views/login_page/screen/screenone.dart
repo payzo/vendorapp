@@ -26,25 +26,27 @@ class initialScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
            children: [
-          
+           vGap(350),
             CButton(
              width: getWidth(context)/1.5,
              height: getHeight(context)/20,
              borderRadius: 5,
+             color: buttonColornew,
              onPressed: () {
                Get.toNamed(AppRoutes.LoginScreen);
              },
-             text: Text('Login'),),
-             SizedBox(height: 5,),
+             text: Text('Login', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: cWhiteColor),),),
+             vGap(30),
             
               CButton(
              width: getWidth(context)/1.5,
              height: getHeight(context)/20,
+             color: buttonColornew,
              borderRadius: 5,
              onPressed: () {
                Get.toNamed(AppRoutes.SignupScreen);
              },
-             text: Text('Signup'),),     
+             text: Text('Signup',  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: cWhiteColor),),),     
             
                   
            ],
