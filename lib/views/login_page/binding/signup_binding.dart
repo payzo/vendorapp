@@ -1,0 +1,13 @@
+import 'package:get/get.dart';
+import 'package:vendor_new_app/views/login_page/controller/signup_controller.dart';
+
+
+class SignupBinding extends Bindings{
+  @override
+  void dependencies(){
+
+    Get.lazyPut(
+      ()=> SignupController()
+    );
+  }
+}
